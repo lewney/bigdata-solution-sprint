@@ -2,3 +2,11 @@
 data/hdfs/namenode/
 data/hdfs/datanode/
 data/postgresql/
+
+.Rproj.user
+.Rhistory
+.RData
+.Rproj
+.Rproj.RData
+
+cartola/src/python/.ipynb_checkpoints/*
