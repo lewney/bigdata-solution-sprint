@@ -1,1 +1,4 @@
-/.idea
+.idea
+data/hdfs/namenode/
+data/hdfs/datanode/
+data/postgresql/
