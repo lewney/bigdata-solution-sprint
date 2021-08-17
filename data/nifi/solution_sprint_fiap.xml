@@ -1,0 +1,2926 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description></description>
+    <groupId>52880ed5-017b-1000-d159-2a4858d27b5f</groupId>
+    <name>solution_sprint_fiap</name>
+    <snippet>
+        <connections>
+            <id>c22f0b1a-aa7c-3682-0000-000000000000</id>
+            <parentGroupId>9cb5b207-5976-3c8e-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>b430c5d3-b559-3f83-0000-000000000000</groupId>
+                <id>151e2796-2320-3367-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <source>
+                <groupId>2ba4c176-ca53-32f4-0000-000000000000</groupId>
+                <id>2ffb900a-03fa-3b83-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <processGroups>
+            <id>2ba4c176-ca53-32f4-0000-000000000000</id>
+            <parentGroupId>9cb5b207-5976-3c8e-0000-000000000000</parentGroupId>
+            <position>
+                <x>24.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>eb535339-e26e-35a8-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>2ba4c176-ca53-32f4-0000-000000000000</groupId>
+                        <id>2ffb900a-03fa-3b83-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>2ba4c176-ca53-32f4-0000-000000000000</groupId>
+                        <id>f5cc32f5-582e-3a42-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <outputPorts>
+                    <id>2ffb900a-03fa-3b83-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-879.7590073271344</x>
+                        <y>232.07164924314503</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>HDFS</name>
+                    <state>RUNNING</state>
+                    <type>OUTPUT_PORT</type>
+                </outputPorts>
+                <processors>
+                    <id>21d84f18-443b-3735-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-480.0</x>
+                        <y>-432.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.11.3</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Command</key>
+<value>
+    <name>Command</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+<value>
+    <name>Command Arguments</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+<value>
+    <name>Batch Duration</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>
+    <name>Redirect Error Stream</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+<value>
+    <name>Working Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value>
+    <name>Argument Delimiter</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Command</key>
+<value>/home/nifi/scripts/shell/get_rodadas.sh</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value> </value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>6000 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Executa Rodadas</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
+                </processors>
+                <processors>
+                    <id>3edc95f7-bf0c-3ddf-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1352.0</x>
+                        <y>-432.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.11.3</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Command</key>
+<value>
+    <name>Command</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+<value>
+    <name>Command Arguments</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+<value>
+    <name>Batch Duration</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>
+    <name>Redirect Error Stream</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+<value>
+    <name>Working Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value>
+    <name>Argument Delimiter</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Command</key>
+<value>/home/nifi/scripts/shell/get_clubes.sh</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value> </value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>6000 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Executa Clubes</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
+                </processors>
+                <processors>
+                    <id>de1e356a-b382-34bc-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-888.0</x>
+                        <y>-432.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.11.3</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Command</key>
+<value>
+    <name>Command</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+<value>
+    <name>Command Arguments</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+<value>
+    <name>Batch Duration</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>
+    <name>Redirect Error Stream</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+<value>
+    <name>Working Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value>
+    <name>Argument Delimiter</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Command</key>
+<value>/home/nifi/scripts/shell/get_partidas_2014-2021.sh</value>
+                            </entry>
+                            <entry>
+<key>Command Arguments</key>
+                            </entry>
+                            <entry>
+<key>Batch Duration</key>
+                            </entry>
+                            <entry>
+<key>Redirect Error Stream</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Working Directory</key>
+                            </entry>
+                            <entry>
+<key>Argument Delimiter</key>
+<value> </value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>6000 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Executa Partidas</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
+                </processors>
+                <processors>
+                    <id>f5cc32f5-582e-3a42-0000-000000000000</id>
+                    <parentGroupId>2ba4c176-ca53-32f4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-968.0</x>
+                        <y>-224.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.11.3</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Input Directory</key>
+<value>
+    <name>Input Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>
+    <name>File Filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Path Filter</key>
+<value>
+    <name>Path Filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Keep Source File</key>
+<value>
+    <name>Keep Source File</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Recurse Subdirectories</key>
+<value>
+    <name>Recurse Subdirectories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Polling Interval</key>
+<value>
+    <name>Polling Interval</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Ignore Hidden Files</key>
+<value>
+    <name>Ignore Hidden Files</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Minimum File Age</key>
+<value>
+    <name>Minimum File Age</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Age</key>
+<value>
+    <name>Maximum File Age</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Minimum File Size</key>
+<value>
+    <name>Minimum File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Size</key>
+<value>
+    <name>Maximum File Size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Input Directory</key>
+<value>/tmp/stage</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>[^\.].*</value>
+                            </entry>
+                            <entry>
+<key>Path Filter</key>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>10</value>
+                            </entry>
+                            <entry>
+<key>Keep Source File</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Recurse Subdirectories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Polling Interval</key>
+<value>0 sec</value>
+                            </entry>
+                            <entry>
+<key>Ignore Hidden Files</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Minimum File Age</key>
+<value>0 sec</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Age</key>
+                            </entry>
+                            <entry>
+<key>Minimum File Size</key>
+<value>0 B</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Size</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Pega Files do stage</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GetFile</type>
+                </processors>
+            </contents>
+            <name>Orquestrador Data ingest</name>
+            <variables/>
+        </processGroups>
+        <processGroups>
+            <id>b430c5d3-b559-3f83-0000-000000000000</id>
+            <parentGroupId>9cb5b207-5976-3c8e-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>448.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>1d2c74b7-f4b4-3aec-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+                        <id>701b8a20-c9d1-3de7-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>Dados_clean</selectedRelationships>
+                    <source>
+                        <groupId>b430c5d3-b559-3f83-0000-000000000000</groupId>
+                        <id>208e614f-eb79-3faf-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>3c591089-0d9c-3234-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+                        <id>feef2760-8be1-3924-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>Dados_raw</selectedRelationships>
+                    <source>
+                        <groupId>b430c5d3-b559-3f83-0000-000000000000</groupId>
+                        <id>208e614f-eb79-3faf-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>d450d211-9cae-36cc-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>b430c5d3-b559-3f83-0000-000000000000</groupId>
+                        <id>208e614f-eb79-3faf-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <source>
+                        <groupId>b430c5d3-b559-3f83-0000-000000000000</groupId>
+                        <id>151e2796-2320-3367-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <inputPorts>
+                    <id>151e2796-2320-3367-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-704.0</x>
+                        <y>528.0</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>FILES</name>
+                    <state>RUNNING</state>
+                    <type>INPUT_PORT</type>
+                </inputPorts>
+                <processGroups>
+                    <id>877e11ef-0d05-3532-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1424.0</x>
+                        <y>-296.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>14bfdd3c-217c-3ab0-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>08a847da-891a-3d34-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>701b8a20-c9d1-3de7-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>44844b2a-0fcf-3c45-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>27da914b-ce75-3875-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Rodadas</selectedRelationships>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>08a847da-891a-3d34-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>5127b22f-7215-30c8-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>8bd5a956-ed15-355b-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clube_id_all</selectedRelationships>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>81e3ae3a-fe44-3a3b-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>612012c9-3503-3b46-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>bfc76cc9-af0c-3ea9-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Partidas</selectedRelationships>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>08a847da-891a-3d34-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>dc1f29a9-fe1c-3264-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>81e3ae3a-fe44-3a3b-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clubes</selectedRelationships>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>08a847da-891a-3d34-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>e930f967-2a9f-37c5-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>45d393fc-74e7-3eab-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clubes_2021</selectedRelationships>
+                            <source>
+<groupId>877e11ef-0d05-3532-0000-000000000000</groupId>
+<id>81e3ae3a-fe44-3a3b-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <inputPorts>
+                            <id>701b8a20-c9d1-3de7-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-432.0</x>
+<y>744.0</y>
+                            </position>
+                            <comments></comments>
+                            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                            <name>dados raw</name>
+                            <state>RUNNING</state>
+                            <type>INPUT_PORT</type>
+                        </inputPorts>
+                        <processors>
+                            <id>08a847da-891a-3d34-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-496.0</x>
+<y>160.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>
+            <name>Routing Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clubes</key>
+        <value>
+            <name>Clubes</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Partidas</key>
+        <value>
+            <name>Partidas</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Rodadas</key>
+        <value>
+            <name>Rodadas</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>Route to Property name</value>
+    </entry>
+    <entry>
+        <key>Clubes</key>
+        <value>${filename:contains('Clube')}</value>
+    </entry>
+    <entry>
+        <key>Partidas</key>
+        <value>${filename:contains('partida')}</value>
+    </entry>
+    <entry>
+        <key>Rodadas</key>
+        <value>${filename:contains('rodada')}</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>RouteOnAttribute</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clubes</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Partidas</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Rodadas</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>unmatched</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                        </processors>
+                        <processors>
+                            <id>27da914b-ce75-3875-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>184.0</x>
+<y>152.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_dados/rodadas</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Ingest_clean_Rodadas</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>45d393fc-74e7-3eab-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-104.0</x>
+<y>-536.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_dados/2021/clubes</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Clubes_2021_CLEAN</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>81e3ae3a-fe44-3a3b-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-488.0</x>
+<y>-152.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>
+            <name>Routing Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clube_id_all</key>
+        <value>
+            <name>Clube_id_all</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clubes_2021</key>
+        <value>
+            <name>Clubes_2021</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>Route to Property name</value>
+    </entry>
+    <entry>
+        <key>Clube_id_all</key>
+        <value>${filename:contains('2014')}</value>
+    </entry>
+    <entry>
+        <key>Clubes_2021</key>
+        <value>${filename:contains('2021')}</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>RouteOnAttribute</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clube_id_all</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clubes_2021</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>unmatched</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                        </processors>
+                        <processors>
+                            <id>8bd5a956-ed15-355b-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-872.0</x>
+<y>-496.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_dados/2014_2020/clubes</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>CLUBES_CLEAN</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>bfc76cc9-af0c-3ea9-0000-000000000000</id>
+                            <parentGroupId>877e11ef-0d05-3532-0000-000000000000</parentGroupId>
+                            <position>
+<x>-1240.0</x>
+<y>160.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_dados/partidas</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Ingest_clean_Partidas</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                    </contents>
+                    <name>Dados Processados</name>
+                    <variables/>
+                </processGroups>
+                <processGroups>
+                    <id>9afa2432-b7d0-3d0b-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-112.0</x>
+                        <y>-280.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>0a0ba7a7-8320-3848-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>32953fbf-d12c-3fbc-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Partidas</selectedRelationships>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>c3bb8206-15d5-3c0d-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>1d4ec1e4-2b71-3208-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>7cd66e61-5a11-32e9-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Rodadas</selectedRelationships>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>c3bb8206-15d5-3c0d-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>c082f6a4-c84c-336b-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>9e5f27de-4e4f-3751-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clube_id_all</selectedRelationships>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>0c6d2d14-1b4f-33b0-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>cd6a9346-3844-3564-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>e4ada0df-32e3-33b4-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clubes_2021</selectedRelationships>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>0c6d2d14-1b4f-33b0-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>f237f490-9901-3c3f-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>c3bb8206-15d5-3c0d-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>feef2760-8be1-3924-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>f8d9d813-7c77-3261-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>0c6d2d14-1b4f-33b0-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Clubes</selectedRelationships>
+                            <source>
+<groupId>9afa2432-b7d0-3d0b-0000-000000000000</groupId>
+<id>c3bb8206-15d5-3c0d-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <inputPorts>
+                            <id>feef2760-8be1-3924-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-432.0</x>
+<y>744.0</y>
+                            </position>
+                            <comments></comments>
+                            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                            <name>dados raw</name>
+                            <state>RUNNING</state>
+                            <type>INPUT_PORT</type>
+                        </inputPorts>
+                        <processors>
+                            <id>0c6d2d14-1b4f-33b0-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-520.0</x>
+<y>-176.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>
+            <name>Routing Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clube_id_all</key>
+        <value>
+            <name>Clube_id_all</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clubes_2021</key>
+        <value>
+            <name>Clubes_2021</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>Route to Property name</value>
+    </entry>
+    <entry>
+        <key>Clube_id_all</key>
+        <value>${filename:contains('2014')}</value>
+    </entry>
+    <entry>
+        <key>Clubes_2021</key>
+        <value>${filename:contains('2021')}</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>RouteOnAttribute</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clube_id_all</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clubes_2021</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>unmatched</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                        </processors>
+                        <processors>
+                            <id>32953fbf-d12c-3fbc-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-1352.0</x>
+<y>176.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_raw/partidas</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Ingest_RAW_Partidas</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>7cd66e61-5a11-32e9-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>232.0</x>
+<y>176.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_raw/rodadas</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Ingest_RAW_Rodadas</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>9e5f27de-4e4f-3751-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-936.0</x>
+<y>-536.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_raw/2014_2020/clubes</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>CLUBES_raw</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                        <processors>
+                            <id>c3bb8206-15d5-3c0d-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-488.0</x>
+<y>176.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>
+            <name>Routing Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Clubes</key>
+        <value>
+            <name>Clubes</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Partidas</key>
+        <value>
+            <name>Partidas</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Rodadas</key>
+        <value>
+            <name>Rodadas</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Routing Strategy</key>
+        <value>Route to Property name</value>
+    </entry>
+    <entry>
+        <key>Clubes</key>
+        <value>${filename:contains('Clube')}</value>
+    </entry>
+    <entry>
+        <key>Partidas</key>
+        <value>${filename:contains('partida')}</value>
+    </entry>
+    <entry>
+        <key>Rodadas</key>
+        <value>${filename:contains('rodada')}</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>RouteOnAttribute</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Clubes</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Partidas</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Rodadas</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>unmatched</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                        </processors>
+                        <processors>
+                            <id>e4ada0df-32e3-33b4-0000-000000000000</id>
+                            <parentGroupId>9afa2432-b7d0-3d0b-0000-000000000000</parentGroupId>
+                            <position>
+<x>-224.0</x>
+<y>-544.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-hadoop-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.11.3</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>
+            <name>Hadoop Configuration Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+        <value>
+            <name>Kerberos Principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+        <value>
+            <name>Kerberos Keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>
+            <name>Kerberos Relogin Period</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+        <value>
+            <name>Additional Classpath Resources</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>
+            <name>Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>
+            <name>Conflict Resolution Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+        <value>
+            <name>Block Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+        <value>
+            <name>IO Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replication</key>
+        <value>
+            <name>Replication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+        <value>
+            <name>Permissions umask</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+        <value>
+            <name>Remote Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+        <value>
+            <name>Remote Group</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>
+            <name>Compression codec</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>
+            <name>Ignore Locality</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Hadoop Configuration Resources</key>
+        <value>/temp-conf/core-site.xml</value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>Kerberos Principal</key>
+    </entry>
+    <entry>
+        <key>Kerberos Keytab</key>
+    </entry>
+    <entry>
+        <key>Kerberos Relogin Period</key>
+        <value>4 hours</value>
+    </entry>
+    <entry>
+        <key>Additional Classpath Resources</key>
+    </entry>
+    <entry>
+        <key>Directory</key>
+        <value>/datalake/cartola_raw/2021/clubes</value>
+    </entry>
+    <entry>
+        <key>Conflict Resolution Strategy</key>
+        <value>replace</value>
+    </entry>
+    <entry>
+        <key>Block Size</key>
+    </entry>
+    <entry>
+        <key>IO Buffer Size</key>
+    </entry>
+    <entry>
+        <key>Replication</key>
+    </entry>
+    <entry>
+        <key>Permissions umask</key>
+    </entry>
+    <entry>
+        <key>Remote Owner</key>
+    </entry>
+    <entry>
+        <key>Remote Group</key>
+    </entry>
+    <entry>
+        <key>Compression codec</key>
+        <value>NONE</value>
+    </entry>
+    <entry>
+        <key>Ignore Locality</key>
+        <value>false</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Clubes_2021_raw</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>RUNNING</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+                        </processors>
+                    </contents>
+                    <name>Dados Raw</name>
+                    <variables/>
+                </processGroups>
+                <processors>
+                    <id>208e614f-eb79-3faf-0000-000000000000</id>
+                    <parentGroupId>b430c5d3-b559-3f83-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-776.0</x>
+                        <y>96.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.11.3</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Routing Strategy</key>
+<value>
+    <name>Routing Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Dados_clean</key>
+<value>
+    <name>Dados_clean</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Dados_raw</key>
+<value>
+    <name>Dados_raw</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Routing Strategy</key>
+<value>Route to Property name</value>
+                            </entry>
+                            <entry>
+<key>Dados_clean</key>
+<value>${filename:contains('clean')}</value>
+                            </entry>
+                            <entry>
+<key>Dados_raw</key>
+<value>${filename:contains('raw')}</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>RouteOnAttribute</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Dados_clean</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Dados_raw</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                </processors>
+            </contents>
+            <name>HDFS ORGANIZE</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>08/17/2021 23:23:45 UTC</timestamp>
+</template>
