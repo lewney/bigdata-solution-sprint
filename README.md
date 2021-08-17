@@ -108,12 +108,16 @@ Ambiente para estudo dos frameworks big data em docker.
     # hadoop fs -mkdir -p /datalake/cartola_raw/partidas
     
     ##Muda permissão da pasta
-    # hadoop fs -chown nifi:supergroup /datalake/cartola_raw/2021/clubes
-    # hadoop fs -chown nifi:supergroup /datalake/cartola_raw/2014_2020/clubes
-    # hadoop fs -chown nifi:supergroup /datalake/cartola_raw/rodadas
-    # hadoop fs -chown nifi:supergroup /datalake/cartola_raw/partidas
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/2021
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/2014_2020
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/2021/clubes
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/2014_2020/clubes
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/rodadas
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_raw/partidas
     
     ### Permite acesso a pasta
+    # hadoop fs -chmod 755 /datalake/cartola_raw/2021
+    # hadoop fs -chmod 755 /datalake/cartola_raw/2014_2020
     # hadoop fs -chmod 755 /datalake/cartola_raw/2021/clubes
     # hadoop fs -chmod 755 /datalake/cartola_raw/2014_2020/clubes
     # hadoop fs -chmod 755 /datalake/cartola_raw/rodadas
@@ -126,12 +130,16 @@ Ambiente para estudo dos frameworks big data em docker.
     # hadoop fs -mkdir -p /datalake/cartola_dados/partidas
     
     ## Mudar user user
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/2021
+    # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/2014_2020
     # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/2021/clubes
     # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/2014_2020/clubes
     # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/rodadas
     # hadoop fs -chown nifi:supergroupr /datalake/cartola_dados/partidas
     
     ### Permite acesso a pasta
+    # hadoop fs -chmod 755 /datalake/cartola_dados/2021
+    # hadoop fs -chmod 755 /datalake/cartola_dados/2014_2020
     # hadoop fs -chmod 755 /datalake/cartola_dados/2021/clubes
     # hadoop fs -chmod 755 /datalake/cartola_dados/2014_2020/clubes
     # hadoop fs -chmod 755 /datalake/cartola_dados/rodadas
